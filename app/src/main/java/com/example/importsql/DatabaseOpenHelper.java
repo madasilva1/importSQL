@@ -2,7 +2,8 @@ package com.example.importsql;
 
 import android.content.Context;
 
-
+//to be able to import SQLiteAssetHelper you must add this line " implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'"
+// in build.gradle file
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 public class DatabaseOpenHelper extends SQLiteAssetHelper {
