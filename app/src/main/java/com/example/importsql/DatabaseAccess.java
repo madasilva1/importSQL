@@ -30,9 +30,9 @@ public class DatabaseAccess  {
             this.db.close();
         }
     }
-//After select enter column to be searched and after table's name  enter column name do be displayed
+//After select enter column to be displayed and after table's name(word_entries) enter column name do be searched
     public String getAdress(String name) {
-        c = db.rawQuery("select Data from word_entries where issues ='" + name + "'", new String[]{});
+        c = db.rawQuery("select Email from customers where FirstName ='" + name + "'", new String[]{});
 
         StringBuffer buffer = new StringBuffer();
         while (c.moveToNext()) {
