@@ -3,6 +3,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 public class DatabaseAccess  {
     private  SQLiteOpenHelper openHelper;
@@ -30,7 +31,9 @@ public class DatabaseAccess  {
             this.db.close();
         }
     }
-//After select enter column to be displayed and after table's name(word_entries) enter column name do be searched
+//After select enter column to be displayed and after
+// table's name enter column name do be searched
+
     public String getAdress(String name) {
         c = db.rawQuery("select Email from customers where FirstName ='" + name + "'", new String[]{});
 
